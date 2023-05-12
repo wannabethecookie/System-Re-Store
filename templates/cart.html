@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+	<head>
+		<title>System Re-Store - Cart</title>
+		<link rel='stylesheet' href='{{ url_for('static', filename='css/cart.css') }}'>
+	</head>
+	<body>
+		<h1 class='top'>
+			<a href="{{ url_for('home') }}"><img id='logo' src='{{ url_for('static', filename='images/logo.png') }}' alt='System Re-Store'></a>
+		</h1>
+		<p class='top'>your one-stop shop for all things vintage</p> 
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<br>
+		<a href="#" onclick='history.back();return false'><img src='{{ url_for('static', filename='images/back.gif') }}' alt='Back'></a>
+		<div>
+			<h1><img id='logo' src='{{ url_for('static', filename='images/shopping.gif') }}' alt='Shopping Cart'></h1>
+			{% if carts != [] %}
+			<table>
+				<tr>
+					<th>Name</th>
+					<th></th>
+					<th>Quantity</th>
+					<th>Price</th>
+					<th></th>
+				</tr>
+				<form id="qty" method="post">
+					{% for item in carts %}
+					<tr> 
+						<td>{{ item[1] }}</td>
+						<td><img class='imgs' src='{{ url_for('static', filename=item[2]) }}'></td>
+						<td>
+							<input type="number" name="quantity" min="1" max="5" value={{ item[5] }}>
+						</td>
+						<td>${{ item[3] }}</td>
+						<td><button name="Remove" value="{{ item[0] }}">Remove</button></td>
+					</tr>
+					{% endfor %}
+				</form>
+				<tr>
+					<td></td>
+					<td></td>
+					<td class='right'><b>Total:</b></td>
+					<td><b>${{ price }}</b></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td class='right'><input class='right' name="Update" type="submit" value="Update" form="qty"></td>
+					<td>
+						<form action="{{ url_for('checkout') }}">
+							<input name="checkout" type="submit" value="Checkout">
+						</form>
+					</td>
+					{% if carts|length > 1 %}
+					<td>
+						<form method="post">
+							<input name="Remove All" type="submit" value="Remove All">
+						</form>
+					</td>
+					{% else %}
+					<td></td>
+					{% endif %}
+				</tr>
+			</table>
+			{% else %}
+			<h1>Your cart is empty.</h1>
+			{% endif %}
+		</div>
+		<p id='copy'>Copyright (c) 2023 System Re-Store. All Rights Reserved.</p>
+	</body>
+</html>

@@ -1,0 +1,52 @@
+body {
+	background: url('/static/images/back.jpg');
+	cursor: url('/static/images/gear.cur'),auto;
+	font-family: Comic Sans MS;
+}
+
+.top {
+	text-align: center;
+}
+
+.header {
+	height: 92px;
+	width: 92px;
+}
+
+.imgs {
+	height: 300px;
+	margin: 30px;
+}
+
+.text2 {
+	padding-top: 0px;
+	font-size: 20px;
+	vertical-align: middle;
+	line-height: 0.5;
+}
+
+.text1 {
+	padding-top: 0px;
+	font-size: 30px;
+	vertical-align: middle;
+	line-height: 0.5;
+}
+
+.container {
+	margin: auto;
+	background: yellow;
+	border: 2px solid black;
+	width: fit-content;
+	padding: 10px;
+	text-align: center;
+}
+
+#logo {
+	width: 500px;
+}
+
+#copy {
+	text-align: center;
+	font-size: 10px;
+	clear: both;
+}

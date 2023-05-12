@@ -1,0 +1,39 @@
+body {
+	background: url('/static/images/back.jpg');
+	cursor: url('/static/images/gear.cur'),auto;
+	font-family: Comic Sans MS;
+}
+
+.top {
+	text-align: center;
+}
+
+.imgs {
+	height: 250px;
+	display: block;
+	margin: auto;
+}
+
+#logo {
+	width: 500px;
+}
+
+#copy {
+	text-align: center;
+	font-size: 10px;
+}
+
+table {
+	display: inline-grid;
+	border: 2px solid black;
+	background: yellow;
+	text-align: center;
+	margin: 25px;
+}
+
+span {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	margin: 50px;
+	background: white;
+}

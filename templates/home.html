@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+	<head>
+		<title>System Re-Store - Home</title>
+		<link rel='stylesheet' href='{{ url_for('static', filename='css/home.css') }}'>
+	</head>
+	<body>
+		<h1 class='top'><img id='logo' src='{{ url_for('static', filename='images/logo.png') }}' alt='System Re-Store'></h1>
+		<p class='top'>your one-stop shop for all things vintage</p> 
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<a id='cart' href='{{ url_for('cart') }}'>
+			<img class='header' align='right' src='{{ url_for('static', filename='images/cart.gif') }}' alt='Shopping Cart'>
+		</a> 
+		<br>
+		<span>
+			{% for item in items %}
+			<table>
+				<tr>
+					<td><img class='imgs' src='{{ url_for('static', filename=item[0]) }}'></td>
+				</tr>
+				<tr>
+					<td>{{ item[1] }}
+				</tr>
+				<tr>
+					<td>${{ item[2] }}
+				</tr>
+				<tr>
+					<td><a href='{{ url_for('info', prod=item[3]) }}'>view information</a></td>
+				</tr>
+				<tr>
+					<td>
+						<form method="post" action="{{ url_for('cart') }}">
+							<input name={{ item[3] }} type="submit" value="Add To Cart">
+						</form>
+					</td>
+				</tr>
+			</table>
+			{% endfor %}
+		</span>
+		<p id='copy'>Copyright (c) 2023 System Re-Store. All Rights Reserved.</p>
+	</body>
+</html>

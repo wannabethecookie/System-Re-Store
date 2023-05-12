@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+	<head>
+		<title>System Re-Store - Finish</title>
+		<link rel='stylesheet' href='{{ url_for('static', filename='css/finish.css') }}'>
+	</head>
+	<body>
+		<h1 class='top'>
+			<a href="{{ url_for('home') }}"><img id='logo' src='{{ url_for('static', filename='images/logo.png') }}' alt='System Re-Store'></a>
+		</h1>
+		<p class='top'>your one-stop shop for all things vintage</p> 
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<img class='header' src='{{ url_for('static', filename='images/gear.gif') }}' alt='Gear'>
+		<div>
+			<h1>Your order has been submitted.</h1>
+			<h1>Your order number is #{{ orderID }}.</h1>
+			<h1>Thanks for shopping with us! <img id='smile' src='{{ url_for('static', filename='images/smile.gif') }}'></h1>
+		</div>
+		<p id='copy'>Copyright (c) 2023 System Re-Store. All Rights Reserved.</p>
+	</body>
+</html>

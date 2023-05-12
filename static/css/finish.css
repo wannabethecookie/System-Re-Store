@@ -1,0 +1,28 @@
+body {
+	background: url('/static/images/back.jpg');
+	cursor: url('/static/images/gear.cur'),auto;
+	font-family: Comic Sans MS;
+}
+
+.top{
+	text-align: center;
+}
+
+.header {
+	height: 92px;
+	width: 92px;
+}
+
+#logo {
+	width: 500px;
+}
+
+#copy {
+	text-align: center;
+	font-size: 10px;
+	clear: both;
+}
+
+div {
+	text-align: center;
+}

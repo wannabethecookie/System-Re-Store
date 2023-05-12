@@ -1,0 +1,49 @@
+body {
+	background: url('/static/images/back.jpg');
+	cursor: url('/static/images/gear.cur'),auto;
+	font-family: Comic Sans MS;
+}
+
+.top{
+	text-align: center;
+}
+
+.header {
+	height: 92px;
+	width: 92px;
+}
+
+#logo {
+	width: 500px;
+}
+
+#checkout {
+	width: 200px;
+}
+
+#copy {
+	text-align: center;
+	font-size: 10px;
+	clear: both;
+}
+
+div {
+	background: yellow;
+	text-align: center;
+	margin: auto;
+	width: 42%;
+	border: 2px solid black;
+	padding: 10px;
+}
+
+input:required:invalid, input:focus:invalid {
+    background-image: url('/static/images/invalid.png');
+    background-position: right top;
+    background-repeat: no-repeat;
+}
+  
+input:required:valid {
+    background-image: url('/static/images/valid.png');
+    background-position: right top;
+    background-repeat: no-repeat;
+}
